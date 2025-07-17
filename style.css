@@ -26,9 +26,6 @@ body {
 main {
     width: 100%;
     min-height: 100dvh;
-    /* background-image: url(images/pexels-codioful-7135037.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 #secao-inicio {
@@ -94,9 +91,9 @@ main {
 }
 
 .nome-cidade {
+    width: 70%;
     font-size: 2rem;
     font-weight: 700;
-    max-width: 180px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -167,7 +164,7 @@ main {
 }
 
 .item-previsoes-semana {
-    width: 50%;
+    width: min(50%, 400px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,12 +213,14 @@ main {
 }
 
 #container-mais-informacoes {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 80%;
 }
 
 #lista-mais-informacoes {
-    width: 100%;
+    width: min(100%, 500px);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -239,4 +238,29 @@ main {
 
 .valor-item-mais-informacoes {
     font-weight: 600;
+}
+
+@media (min-width: 1000px) {
+    :root {
+        font-size: 17px;
+    }
+
+    .btn-fechar-previsao {
+        font-size: 2rem;
+        top: 45px;
+        left: 20%;
+    }
+
+    .container-previsao-cidade {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .nome-cidade {
+        width: auto;
+    }
+
+    #lista-mais-informacoes {
+        justify-content: center;
+    }
 }
