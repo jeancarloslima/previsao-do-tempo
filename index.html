@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <div id="main-container">
+            <section id="secao-inicio">
+                <input type="text" name="cidade" id="cidade" placeholder="Insira o nome da cidade">
+                <span id="erro-procura-cidade">Cidade não encontrada!</span>
+                <button id="btn-pesquisa-cidade">Pesquisar</button>
+            </section>
+
+            <section id="secao-previsao-tempo">
+                <a href="#" class="btn-fechar-previsao">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+
+                <div class="container-previsao-cidade">
+                    <h2 class="nome-cidade">Suzano</h2>
+                    <h3 class="data">QUI,<br>17 JUL</h3>
+                </div>
+
+                <div id="container-previsao-tempo">
+                    <img id="icone-tempo"></img>
+                    <h3 id="texto-tempo">Parcialmente nublado</h3>
+                    <div id="container-temperaturas">
+                        <h3 id="temperatura-minima"></h3>
+                        <h2 id="temperatura">27°</h2>
+                        <h3 id="temperatura-maxima"></h3>
+                    </div>
+                </div>
+
+                <div id="container-previsao-semana">
+                    <ul id="lista-previsoes-semana">
+                        <li class="item-previsoes-semana">
+                            <img class="icone-previsao-semana" id="icone-previsao-amanha"></img>
+                            <span class="dia-da-semana" id="dia-amanha"></span>
+                            <h4 class="temperatura-maxima-semana" id="temperatura-maxima-amanha">33°</h4>
+                            <h4 class="temperatura-minima-semana" id="temperatura-minima-amanha">27°</h4>
+                        </li>
+                        <li class="item-previsoes-semana">
+                            <img class="icone-previsao-semana" id="icone-previsao-depois-amanha"></img>
+                            <span class="dia-da-semana" id="dia-depois-amanha"></span>
+                            <h4 class="temperatura-maxima-semana" id="temperatura-maxima-depois-amanha">33°</h4>
+                            <h4 class="temperatura-minima-semana" id="temperatura-minima-depois-amanha">27°</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container-botoes-abas">
+                    <button id="btn-mostrar-mais-informacoes">Mais informações</button>
+                </div>
+            </section>
+
+            <section id="secao-mais-informacoes">
+                <a href="#" class="btn-fechar-previsao">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+
+                <div class="container-previsao-cidade">
+                    <h2 class="nome-cidade">Dubai</h2>
+                    <h3 class="data">WED<br>16 JUL</h3>
+                </div>
+
+                <div id="container-mais-informacoes">
+                    <ul id="lista-mais-informacoes">
+                        <li class="item-mais-informacoes">
+                            <span class="titulo-item-mais-informacoes">Vento</span>
+                            <h3 class="valor-item-mais-informacoes" id="velocidade-vento">3 km/h</h3>
+                        </li>
+                        <li class="item-mais-informacoes">
+                            <span class="titulo-item-mais-informacoes">Umidade</span>
+                            <h3 class="valor-item-mais-informacoes" id="umidade">70%</h3>
+                        </li>
+                        <li class="item-mais-informacoes">
+                            <span class="titulo-item-mais-informacoes">Chance de Chuva</span>
+                            <h3 class="valor-item-mais-informacoes" id="chance-de-chuva">4:56</h3>
+                        </li>
+                        <li class="item-mais-informacoes">
+                            <span class="titulo-item-mais-informacoes">Nuvens</span>
+                            <h3 class="valor-item-mais-informacoes" id="nuvens">4:56</h3>
+                        </li>
+                        <li class="item-mais-informacoes">
+                            <span class="titulo-item-mais-informacoes">Pressão ATM</span>
+                            <h3 class="valor-item-mais-informacoes" id="pressao-atmosferica">756 mbar</h3>
+                        </li>
+                        <li class="item-mais-informacoes">
+                            <span class="titulo-item-mais-informacoes">Nascer do sol</span>
+                            <h3 class="valor-item-mais-informacoes" id="horario-nascer-sol">4:56</h3>
+                        </li>
+                        <li class="item-mais-informacoes">
+                            <span class="titulo-item-mais-informacoes">Nascer do sol</span>
+                            <h3 class="valor-item-mais-informacoes" id="horario-por-sol">4:56</h3>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="container-botoes-abas">
+                    <button id="btn-mostrar-previsao">Voltar</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>

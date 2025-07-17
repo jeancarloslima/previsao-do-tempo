@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* Cores */
+    --cor-texto: #ffffff;
+    --cor-fundo: #5c8fff;
+    --cor-principal: #8ecae6;
+    --cor-secundaria: #fb8500;
+    --cor-terciaria: #302f2f;
+    /* Fontes */
+    --fonte-principal: "Inter", sans-serif;
+    /* Configurações */
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+main {
+    width: 100%;
+    min-height: 100dvh;
+    /* background-image: url(images/pexels-codioful-7135037.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+#secao-inicio {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#cidade {
+    width: 250px;
+    height: 40px;
+    padding: 1rem;
+    border-radius: 16px;
+    text-align: center;
+    outline: none;
+}
+
+#erro-procura-cidade {
+    display: none;
+    color: var(--cor-secundaria);
+}
+
+#btn-pesquisa-cidade {
+    width: 200px;
+    height: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--cor-texto);
+    outline: none;
+    cursor: pointer;
+}
+
+#secao-inicio {
+    display: flex;
+}
+
+#secao-previsao-tempo {
+    height: 100dvh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    padding: 3rem 2rem;
+}
+
+.btn-fechar-previsao {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.container-previsao-cidade {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nome-cidade {
+    font-size: 2rem;
+    font-weight: 700;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.data {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#container-previsao-tempo {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#icone-tempo {
+    width: min(50%, 200px);
+}
+
+#texto-tempo {
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#container-temperaturas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+#temperatura-minima,
+#temperatura-maxima {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#temperatura-minima {
+    color: var(--cor-principal);
+}
+
+#temperatura {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#temperatura-maxima {
+    color: var(--cor-secundaria);
+}
+
+#container-previsao-semana {
+    width: 100%;
+    height: 20%;
+}
+
+#lista-previsoes-semana {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.item-previsoes-semana {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: #6d9bfd;
+    border-radius: 8px;
+}
+
+.temperatura-maxima-semana {
+    color: var(--cor-secundaria);
+}
+
+.temperatura-minima-semana {
+    color: var(--cor-principal);
+}
+
+.container-botoes-abas {
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0 2rem;
+}
+
+#btn-mostrar-mais-informacoes,
+#btn-mostrar-previsao {
+    width: 300px;
+    height: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--cor-fundo);
+    background-color: var(--cor-texto);
+    color: var(--cor-terciaria);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#secao-mais-informacoes {
+    display: none;
+    height: 100dvh;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    padding: 3rem 2rem;
+}
+
+#container-mais-informacoes {
+    width: 100%;
+    height: 80%;
+}
+
+#lista-mais-informacoes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.item-mais-informacoes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.valor-item-mais-informacoes {
+    font-weight: 600;
+}
